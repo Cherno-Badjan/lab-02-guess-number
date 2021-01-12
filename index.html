@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="gutter-right logo">
+            <img src="assets/big-logo.png" />
+        </div>
+    </header>
+    <main>
+        <h1 class="name">
+            HOCUS POCUS NUMBER GUESSING GAME!
+        </h1>
+        <h2 class="instructions">How to play </h2>
+        <ol type="1">
+            <li>Guess any number between 1-20 (1 & 20 included)</li>
+            <li>Enter number in 'number field' and click submit</li>
+            <li>You'll fave a total of 4 guesses!</li>
+            <li>If you do not get the number after 4 guesses, click on play button and try again!</li>
+        </ol>
+
+        <p>
+            <input Type=Number>
+            <button id="submit-button">Submit!</button>
+        </p>
+        <span id="guesses">You have 4 guesses remaining</span>
+
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
