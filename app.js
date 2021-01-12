@@ -1,8 +1,9 @@
 // import functions and grab DOM elements
 const submitButton = document.getElementById('submit-button');
 const playAgain = document.getElementById('restart');
-const numberGuessed = document.getElementById('user-guess');
+const userGuess = document.getElementById('user-guess');
 const results = document.getElementById('result');
+const numberOfGuesses = document.getElementById('guesses');
 
 
 // initialize state
@@ -12,6 +13,11 @@ let guessesRemaining = 4;
 // set event listeners to update state and DOM
 submitButton.addEventListener('click', () => {
     guessesRemaining--;
-    console.log(guessesRemaining);
+
+    numberOfGuesses.textContent = (`You have ${guessesRemaining} guesses left!`);
+    if (guessesRemaining === 0) {
+        numberOfGuesses.textContent = (`No guesses left`);
+    }
+
 
 })
