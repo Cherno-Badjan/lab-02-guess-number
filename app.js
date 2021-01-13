@@ -11,13 +11,15 @@ const numberOfGuesses = document.getElementById('guesses');
 // initialize state
 let randomNumber = Math.ceil(Math.random() * 20);
 let correctNumber = randomNumber;
-let guessesRemaining = 10;
+let guessesRemaining = 4;
 
 // set event listeners to update state and DOM
 submitButton.addEventListener('click', () => {
     guessesRemaining--;
     let userInput = Number(userGuess.value);
     const answer = compareNumbers(userInput, correctNumber);
+
+    //Evaluates answer (by calling compareNumbers function) and gives and display number of guesses remaining
 
     if (guessesRemaining > 0 && answer === 1) {
 
@@ -31,23 +33,17 @@ submitButton.addEventListener('click', () => {
     }
     if (guessesRemaining === 0) {
         numberOfGuesses.textContent = (`You have no guesses left. Back to square one`);
+        submitButton.disabled = true;
+        results.textContent = '';
     } else {
         if (answer === 0) {
 
             results.textContent = (`You won! Go play the lotto right now. You are super lucky!`);
+            submitButton.disabled = true;
             numberOfGuesses.textContent = '';
         }
     }
-
-
 });
 
-/*playAgainButton.addEventListener('click', () => {
 
 
-    guessesRemaining = 10;
-    results.textContent = '';
-    numberOfGuesses.textContent = '';
-    userGuess.textContent = '';
-
-});*/
