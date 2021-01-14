@@ -17,25 +17,21 @@ submitButton.addEventListener('click', () => {
     const answer = compareNumbers(userInput, correctNumber);
     //Evaluates answer (by calling compareNumbers function) and gives and display number of guesses remaining
     
-    if (guessesRemaining > 0 && answer === 1) {
-
+    if (answer === 1) {
         numberOfGuesses.textContent = (`You have ${guessesRemaining} guesses left!`);
         results.textContent = (`Too high!Try again`);
     }
-    if (guessesRemaining > 0 && answer === -1) {
-
+    if (answer === -1) {
         numberOfGuesses.textContent = (`You have ${guessesRemaining} guesses left!`);
         results.textContent = (`Too low!Try again`);
     }
-    if (guessesRemaining === 0) {
+    if (answer === 0) {
+        results.textContent = (`You won! Go play the lotto right now. You are super lucky!`);
+        submitButton.disabled = true;
+        numberOfGuesses.textContent = '';
+    } else if (guessesRemaining === 0 && answer !== 0) {
         numberOfGuesses.textContent = (`You have no guesses left. Back to square one`);
         submitButton.disabled = true;
         results.textContent = '';
-    } else {
-        if (answer === 0) {
-            results.textContent = (`You won! Go play the lotto right now. You are super lucky!`);
-            submitButton.disabled = true;
-            numberOfGuesses.textContent = '';
-        }
-    }
+    } 
 });
