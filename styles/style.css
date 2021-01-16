@@ -79,13 +79,22 @@ h2 {
 header img {
     height: var(--header-height);
 }
+
+#user-guess {
+    width: 70%;
+}
+
+.feedback {
+    display:flex;
+}
+
 input{
     width: 130px;
 }
 
 
 content {
-    width: 80%;
+    width: 100%;
 }
 
 p {
