@@ -80,10 +80,18 @@ header img {
     height: var(--header-height);
 }
 
+#user-guess {
+    width: 70%;
+}
+
+.feedback {
+    display:flex;
+}
+
 
 
 content {
-    width: 80%;
+    width: 100%;
 }
 
 p {
