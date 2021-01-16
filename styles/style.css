@@ -88,6 +88,9 @@ header img {
     display:flex;
 }
 
+input{
+    width: 130px;
+}
 
 
 content {
